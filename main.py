@@ -5,13 +5,13 @@ from langgraph.prebuilt import create_react_agent
 from dotenv import load_dotenv
 import os
 
-# Load your environment variables
+
 load_dotenv()
 
 def main():
     print("KEY:", os.getenv("OPENROUTER_API_KEY")[:10] + "...")
 
-    # Use ChatOpenAI with OpenRouter setup
+    
     model = ChatOpenAI(
         temperature=0,
         openai_api_key=os.getenv("OPENROUTER_API_KEY"),
